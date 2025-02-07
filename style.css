@@ -1,0 +1,337 @@
+/* Font 1 (subheadings): Avenir Light */
+@font-face {
+  font-family: 'AvenirLight';
+  src: url('fonts/Avenir Light.ttf') format('truetype');
+  font-weight: 50; /* Changed thin to numeric value */
+}
+
+/* Font 2 (text): MonoSpace */
+@font-face {
+  font-family: 'MonoSpace';
+  src: url('fonts/IBMPlexMono-Regular.ttf') format('truetype');
+  font-weight: normal;
+}
+
+/* Font 3 (title font): CourrierNewBold */
+@font-face {
+  font-family: 'CourrierNewBold';
+  src: url('fonts/courbd.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Faster fade-in effect on page load */
+body {
+  animation: fadeIn 0.8s ease-out; /* Reduced the duration to 0.8s */
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Fade-out effect */
+.fade-out {
+  animation: fadeOut 0.5s ease-in-out forwards; /* Added fade-out */
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+/* Fade-in effect */
+.fade-in {
+  animation: fadeIn 0.8s ease-out; /* Adjust duration as per your need */
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+body {
+  background-color: #faf5f5; /* Replace with your desired color */
+}
+
+
+/* TITLE */
+.site-title {
+  color: #ebadb6;
+  font-family: 'CourrierNewBold', sans-serif;
+  font-size: 40px;
+  margin-bottom: 20px; /* Add some space below the site title */
+}
+
+/* Language dropdown */
+.language-dropdown {
+  position: fixed;
+  top: 10px;
+  right: 20px;
+  font-family: Arial, sans-serif;
+  cursor: pointer;
+}
+
+.language-dropdown .current-language {
+  display: flex;
+  align-items: center;
+  font-size: 18px; /* Increased font size */
+  padding: 10px; /* Add padding for a larger clickable area */
+}
+
+.language-dropdown .current-language img {
+  width: 40px; /* Larger flag size */
+  height: 40px; /* Match height for circular shape */
+  margin-right: 10px; /* Space between flag and text */
+  border-radius: 50%; /* Makes the flags circular */
+  object-fit: cover; /* Ensures the image fits properly within the circle */
+}
+
+.language-dropdown .language-options {
+  display: none; /* Hidden by default */
+  position: absolute;
+  top: 50px; /* Adjusted to accommodate the larger button */
+  right: 0;
+  background: white;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  list-style: none;
+  padding: 5px 0;
+  margin: 0;
+  z-index: 1000;
+}
+
+.language-dropdown .language-options li {
+  padding: 10px 20px; /* Increased padding for a larger clickable area */
+  display: flex;
+  align-items: center;
+  font-size: 18px; /* Larger font size for dropdown options */
+}
+
+.language-dropdown .language-options li img {
+  width: 40px; /* Match size with the main flag */
+  height: 40px; /* Keep it circular */
+  margin-right: 12px; /* Add more space between flag and text */
+  border-radius: 50%; /* Makes the flags circular */
+  object-fit: cover; /* Ensures the image fits properly within the circle */
+}
+
+.language-dropdown .language-options li:hover {
+  background-color: #ebd5d8;
+}
+
+/* Show dropdown on hover */
+.language-dropdown:hover .language-options {
+  display: block;
+}
+
+nav { 
+  margin-top: 20px; /* Add space between the navigation and site title */
+}
+
+nav ul {
+  font-family: 'MonoSpace', Arial, sans-serif; /* Fallback to Arial */
+  font-size: 20px;
+  list-style-type: none; /* Remove default list styling */
+  padding: 0;
+  margin: 0;
+  display: flex; /* Arrange the links horizontally */
+  justify-content: center; /* Center the navigation items */
+}
+
+nav ul li {
+  margin: 0 30px; /* Add spacing between the links */
+  position: relative; /* Needed for positioning the dropdown */
+}
+
+/* Style the links inside the navigation */
+nav ul li a {
+  text-decoration: none; /* Remove underline */
+  color: #707070; /* Set the color for the normal state */
+  padding: 10px 20px; /* Add padding around the text */
+  display: inline-block; /* Ensure padding works */
+  border-radius: 5px; /* Optional: rounded corners */
+  transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
+  white-space: nowrap; /* Prevent text from wrapping */
+}
+
+/* Hover effect for each link */
+nav ul li a:hover {
+  background-color: #ebd5d8; /* Change background color on hover */
+  color: #000000; /* Set the text color when hovered */
+}
+
+/* Dropdown Menu Hidden by Default */
+nav ul li ul.dropdown {
+  display: none; /* Hide the dropdown by default */
+  position: absolute; /* Position it below the parent link */
+  background-color: #fff; /* Set background color */
+  border-radius: 5px; /* Optional: rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: shadow for depth */
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  min-width: 180px; /* Ensure the dropdown has a minimum width */
+}
+
+/* Make the dropdown appear when hovering over the parent link */
+nav ul li:hover > ul.dropdown {
+  display: block; /* Show the dropdown when hovering over the parent */
+}
+
+/* Style the dropdown menu items */
+nav ul li ul.dropdown li a {
+  display: block; /* Make the links block-level for easy clicking */
+  padding: 10px 20px; /* Consistent padding inside the dropdown item */
+  color: #333; /* Default text color */
+  text-decoration: none; /* Remove underline */
+  border-radius: 0; /* Remove border-radius from dropdown items */
+  width: 100%; /* Ensure it takes the full width of the dropdown */
+  box-sizing: border-box; /* Include padding in the element's width */
+  white-space: nowrap; /* Prevent text from wrapping */
+}
+
+/* Hover effect for dropdown menu items */
+nav ul li ul.dropdown li a:hover {
+  background-color: #ebd5d8; /* Background color on hover */
+  color: #fff; /* Change text color on hover */
+}
+
+/* Ensure no margins or padding on list items */
+nav ul li ul.dropdown li {
+  margin: 0; /* Remove margin */
+  padding: 0; /* Remove padding */
+}
+
+
+/* MAIN IMAGE */
+
+.image-container {
+  text-align: center; /* Center the content horizontally */
+  margin: 50px auto; /* Center the container and add vertical spacing */
+  width: 100%; /* Ensure it spans the full width */
+}
+
+.image-container img {
+  width: 100%; /* Make the image responsive */
+  max-width: 300px; /* Limit the width */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 50%; /* This makes the image circular */
+  object-fit: cover; /* Ensure the image fits nicely inside the circle */
+  border: 5px solid #ffffff; /* Optional: Add a border around the image */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Optional: Add a shadow */
+}
+
+/* MAIN TEXT */
+
+h1 {
+  font-family: "MonoSpace", sans-serif;
+  text-align: center;
+  margin-top: 30px; /* Space above the h1 */
+  margin-bottom: 0px; /* No space below h1 */
+  padding: 0;
+}
+
+.about-hyeji {
+  font-family: 'AvenirLight', sans-serif;
+  font-size: 35px;
+  font-weight: lighter; /* Try using lighter or a numeric weight */
+  margin-top: -10px;
+  margin-bottom: 0;
+  padding: 0;
+  text-align: center;
+}
+
+p {
+  color: #404040;
+  font-family: "MonoSpace", sans-serif;
+  text-align: center;
+  font-size: 17px;
+  margin-top: 10px; /* Space above the paragraph */
+  margin-bottom: 30px; /* Space below the paragraph */
+  padding: 0;
+}
+
+/* Footer Styling */
+footer {
+  text-align: center; /* Center the content */
+  padding: 20px 0;
+}
+
+/* Separator Line Above Footer */
+.footer-separator {
+  height: 2px; /* Increased thickness of the line */
+  background-color: #ccc; /* Light gray separator line */
+  margin-bottom: 20px; /* Space between the line and the footer */
+  width: 50%; /* Set the width of the line to 50% to make it shorter */
+  margin-left: auto; /* Center the line */
+  margin-right: auto; /* Center the line */
+}
+
+/* Social Media Icons Styling */
+.social-media {
+  display: flex;
+  justify-content: center; /* Center the icons horizontally */
+  gap: 20px; /* Space between icons */
+}
+
+.social-icon img {
+  width: 40px; /* Icon size */
+  height: 40px;
+  transition: transform 0.3s ease; /* Smooth hover effect */
+}
+
+.social-icon img:hover {
+  transform: scale(1.1); /* Scale up the icon when hovered */
+}
+
+/* Copyright Text Styling */
+footer p {
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+/* Specific Styles for ToS Page */
+#terms-of-service h1 {
+  font-family: 'CourrierNewBold', monospace;
+  color: #ebadb6;
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+
+#terms-of-service h2 {
+  font-family: 'AvenirLight', sans-serif;
+  color: #ebadb6;
+  font-size: 35px;
+  font-weight: lighter;
+  margin-top: -10px;
+  margin-bottom: 20px;
+}
+
+#terms-of-service p,
+#terms-of-service ul {
+  font-family: 'MonoSpace', monospace;
+  color: #404040;
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+#terms-of-service ul {
+  padding-left: 20px;
+  list-style-type: disc;
+}

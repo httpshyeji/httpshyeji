@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>hyeji2.0</title>
+  <link href="style.css" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Language Switcher Example</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  
+  <!-- Website Title -->
+  <header>
+    <h1 class="site-title">HYEJI2.0</h1>
+  <!-- Language Dropdown (Top Right) -->
+  <div class="language-dropdown">
+    <div class="current-language">
+      <img src="images/united-kingdom-flag-png-large.png" alt="English Flag" class="flag"> EN
+    </div>
+    <ul class="language-options">
+      <li onclick="changeLanguage('en')">
+        <img src="images/united-kingdom-flag-png-large.png" alt="English Flag"> EN
+      </li>
+      <li onclick="changeLanguage('fr')">
+        <img src="images/france-flag-png-large.png" alt="French Flag"> FR
+      </li>
+    </ul>
+  </div>
+  </header>
+
+  <!--NAVIGATION TAB -->
+  <nav class="navbar">
+    <ul class="nav-list">
+      <li><a href="aboutme.html"data-lang-en="ABOUT ME" data-lang-fr="À PROPOS DE MOI">ABOUT ME</a></li>
+      <li><a href="#" class="gallery-link">GALLERY</a>
+        <!-- Dropdown Menu for Gallery -->
+        <ul class="dropdown">
+          <li><a href="illustrations.html">Illustrations</a></li>
+          <li><a href="twitch.html">Twitch</a></li>
+        </ul>
+      </li>
+<li><a href="commissions.html" class="commissions-link">COMMISSIONS</a>
+  <!-- Dropdown Menu for Commissions -->
+  <ul class="dropdown">
+    <li>
+        <a href="tos.html" data-lang-en="Terms of Service" data-lang-fr="Conditions de Service">
+    Terms of Service
+  </a>
+    </li>
+  </ul>
+</li>
+      <li><a href="https://www.inprnt.com/gallery/hyeji2.0/" target="_blank">PRINTS</a></li>
+      <li><a href="contact.html">CONTACT</a></li>
+    </ul>
+  </nav>
+
+  <div class="terms-of-service"style="text-align: center;">
+  <!--HOMEPAGE CONTENT-->
+<h1 style="font-family: 'CourrierNewBold'; color: #ebadb6;">Terms of Service</h1>
+
+    <h2 style="font-family: 'AvenirLight'">II. General Terms</h2>
+    <ul style="font-family: 'AvenirLight'""font-size: 25px;">
+        <li>By commissioning, the customer agrees to these Terms of Service and confirms they are at least 18 years old or have parental consent.</li>
+        <li>We will communicate clearly and avoid excessive grammar or spelling mistakes to reduce misunderstandings.</li>
+        <li>Rude or disrespectful behavior will result in commission cancellation or decline. Repeat incidents may lead to being blocked.</li>
+        <li>Communication will be conducted in English or French, via Instagram, Discord, or e-mail.</li>
+        <li>I reserve the right to decline a commission request without explanation, though I will typically provide one.</li>
+        <li>If I must cancel a commission due to personal circumstances (e.g., health or emergencies), I will issue a full refund and explain when possible.</li>
+        <li>If the customer violates payment or copyright terms and refuses to comply, I will take legal action.</li>
+        <li>In cases of fraud or extreme bad behavior, I may expose the customer to warn other artists.</li>
+        <li>These Terms of Service are governed by French law, and any disputes will be handled in France.</li>
+        <li>By submitting a commission, the customer agrees to the collection and use of their personal data for completing the commission, in compliance with GDPR.</li>
+    </ul>
+
+    <h2 style="font-family: 'AvenirLight'">II. Payment and Refund Policies</h2>
+    <ul style="font-family: 'AvenirLight'""font-size: 25px;">
+        <li>I accept Euros and USD only.</li>
+        <li>A 50% deposit is required upfront. The remaining 50% is due upon completion.</li>
+        <li>I am not responsible for delays if the customer doesn’t respond or provides insufficient references.</li>
+        <li>Refunds can be discussed, but I reserve the right to follow these policies.</li>
+        <li>If payment was made in cash (e.g., at cons), refunds will be processed online.</li>
+    </ul>
+
+    <h2 style="font-family: 'AvenirLight'">III. Customer Satisfaction</h2>
+    <ul style="font-family: 'AvenirLight'""font-size: 25px;">
+        <li>Commissions will be delivered digitally in high-resolution PNG/JPEG format via email or file-sharing.</li>
+        <li>Customers are allowed 6 revisions: 3 for the sketch and 3 for color.</li>
+        <li>After the sketch is approved, only color-related revisions will be accepted.</li>
+        <li>Once completed, only minor changes will be accepted; major changes (e.g., outfit, color or lighting) will incur extra fees.</li>
+        <li>Please provide as much detail and as many references as possible to avoid unnecessary revisions and such issues.</li>
+        <li>The customer is responsible for providing timely feedback and clear references.</li>
+        <li>If requested, I will keep the commission confidential until the customer chooses to reveal it.</li>
+    </ul>
+
+    <h2 style="font-family: 'AvenirLight'">IV. Copyright / Usage Policy</h2>
+    <ul style="font-family: 'AvenirLight'""font-size: 25px;">
+        <li>I will not draw unauthorized characters or assets. The client is responsible if this happens.</li>
+        <li>The commission is for personal use only and cannot be used commercially without my written consent. If you want to use it commercially (e.g., selling prints), please contact me for a licensing fee.</li>
+        <li>I retain full rights to the artwork and may use it for promotion or sell prints.</li>
+        <li>The customer may print or post the artwork with proper, visible credit.</li>
+        <li>The customer cannot:
+            <ul>
+                <li>Claim credit for the artwork.</li>
+                <li>Remove watermarks/signatures.</li>
+                <li>Reproduce, trace, edit, alter, distribute, sell, or profit from the artwork without my permission.</li>
+            </ul>
+        </li>
+        <li>If any copyright rules are violated and the customer refuses to comply, I will revoke their rights to the artwork.</li>
+    </ul>
+
+    <h2 style="font-family: 'AvenirLight'">V. Force Majeure</h2>
+    <ul style="font-family: 'AvenirLight'""font-size: 25px;">
+        <li>I am not liable for delays or inability to complete a commission due to events beyond my reasonable control (e.g., natural disasters, pandemics). If this happens, I will update the customer and offer a refund or work out an alternative solution.</li>
+        <li>Neither party is liable for non-performance caused by unforeseen circumstances.</li>
+    </ul>
+  </div>
+
+<!-- Footer -->
+<footer>
+<div class="footer-separator"></div> <!-- Separator Line -->
+<footer>
+  <div class="social-media">
+    <a href="https://www.instagram.com/hyeji.2.0" target="_blank" class="social-icon">
+      <img src="images/icons8-instagram-500.png" alt="Twitter">
+    </a>
+    <a href="https://www.tiktok.com/@hyeji2.0" target="_blank" class="social-icon">
+      <img src="images/icons8-tiktok-500.png" alt="Instagram">
+    </a>
+    <a href="https://ko-fi.com/hyeji" target="_blank" class="social-icon">
+      <img src="images/icons8-ko-fi-500.png" alt="Facebook">
+    </a>
+  </div>
+  <p>hyeji.pro@gmail.com</p>
+  <p>&copy; 2025 Hyeji2.0. All Rights Reserved.</p>
+</footer>
+
+<script src="languages.js"></script>
+</body>
+</html>
