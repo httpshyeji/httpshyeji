@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>hyeji2.0</title>
+	<link href="style.css" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Language Switcher Example</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  
+  <!-- Website Title -->
+  <header>
+    <h1 class="site-title">HYEJI2.0</h1>
+  <!-- Language Dropdown (Top Right) -->
+  <div class="language-dropdown">
+    <div class="current-language">
+      <img src="images/united-kingdom-flag-png-large.png" alt="English Flag" class="flag"> EN
+    </div>
+    <ul class="language-options">
+      <li onclick="changeLanguage('en')">
+        <img src="images/united-kingdom-flag-png-large.png" alt="English Flag"> EN
+      </li>
+      <li onclick="changeLanguage('fr')">
+        <img src="images/france-flag-png-large.png" alt="French Flag"> FR
+      </li>
+    </ul>
+  </div>
+  </header>
+
+  <!--NAVIGATION TAB -->
+  <nav class="navbar">
+    <ul class="nav-list">
+      <li><a href="aboutme.html"data-lang-en="ABOUT ME" data-lang-fr="À PROPOS DE MOI">ABOUT ME</a></li>
+      <li><a href="#" class="gallery-link">GALLERY</a>
+        <!-- Dropdown Menu for Gallery -->
+        <ul class="dropdown">
+          <li><a href="illustrations.html">Illustrations</a></li>
+          <li><a href="twitch.html">Twitch</a></li>
+        </ul>
+      </li>
+<li><a href="commissions.html" class="commissions-link">COMMISSIONS</a>
+  <!-- Dropdown Menu for Commissions -->
+  <ul class="dropdown">
+    <li><a href="tos.html" data-lang-en="Terms of Service" data-lang-fr="Conditions de Service">Terms of Service</a></li>
+  </ul>
+</li>
+      <li><a href="https://www.inprnt.com/gallery/hyeji2.0/" target="_blank">PRINTS</a></li>
+      <li><a href="contact.html">CONTACT</a></li>
+    </ul>
+  </nav>
+
+  <!--HOMEPAGE CONTENT-->
+  <section>
+    <!-- Circular Image -->
+    <div class="image-container">
+      <img src="images/ETHEREAL-Y.png" alt="Ethereal Image">
+    </div>
+
+    <!-- About Me Text -->
+    <h1 class="about-hyeji"data-lang-en="About Hyeji" data-lang-fr="À propos de Hyeji">About Hyeji</h1>
+    <p id="welcome" data-lang-en="Welcome to Hyeji’s website <3</p>"data-lang-fr="Bienvenue sur le site de Hyeji <3">Welcome to Hyeji’s website <3</p>
+    <p id="description" data-lang-en="I'm a Korean freelance artist living in France who’s a little too addicted to games.<br>
+    I’m an art school student aiming to be a full-time artist and release my own<br>
+    webcomic. I hope my work can inspire others the way other<br>
+    artists have inspired me ♡<br>
+    Enjoy your stay here!"data-lang-fr="Je suis une artiste freelance coréenne qui vit en France et est légèrement trop addict aux jeux-vidéos.<br>
+    Je suis en école d'art et vise à devenir une artiste à plein-temps puis sortir mon propre<br> webcomic. J'espère pouvoir inspirer les autres de la même<br> façon que les autres artistes m'ont inspirée ♡<br> Bonne visite !">I'm a Korean freelance artist living in France who’s a little too addicted to games.<br>
+    I’m an art school student aiming to be a full-time artist and release my own<br>
+    webcomic. I hope my work can inspire others the way other<br>
+    artists have inspired me ♡<br>
+    Enjoy your stay here!</p>
+  </section>
+
+<!-- Footer -->
+<footer>
+<div class="footer-separator"></div> <!-- Separator Line -->
+<footer>
+  <div class="social-media">
+    <a href="https://www.instagram.com/hyeji.2.0" target="_blank" class="social-icon">
+      <img src="images/icons8-instagram-500.png" alt="Twitter">
+    </a>
+    <a href="https://www.tiktok.com/@hyeji2.0" target="_blank" class="social-icon">
+      <img src="images/icons8-tiktok-500.png" alt="Instagram">
+    </a>
+    <a href="https://ko-fi.com/hyeji" target="_blank" class="social-icon">
+      <img src="images/icons8-ko-fi-500.png" alt="Facebook">
+    </a>
+  </div>
+  <p>hyeji.pro@gmail.com</p>
+  <p>&copy; 2025 Hyeji2.0. All Rights Reserved.</p>
+</footer>
+
+<script src="languages.js"></script>
+</body>
+</html>
